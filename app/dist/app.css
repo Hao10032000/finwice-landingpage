@@ -209,14 +209,14 @@ html {
   -webkit-transition: all 500ms ease;
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
-  margin-right: 40px;
+  margin-right: 37px;
 }
 
 .main-header .main-menu .navigation>li.active a {
   /* background-color: #317C6F;
   padding: 2px 20px;
   border-radius: 100px; */
-  color: #317C6F;
+  color: #fff;
 }
 
 .main-header .sticky-header .nav-outer .options-box {
@@ -294,9 +294,59 @@ html {
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
 }
+.main-header .main-menu .navigation>li>a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.15);
+  top: 62px;
+  left: auto;
+  right: 0;
+  width: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main-header .main-menu .navigation>li.active>a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.15);
+  top: 62px;
+  left: auto;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.main-header .main-menu .navigation>li>a:hover  {
+  color: #fff !important;
+}
+.main-header .main-menu .navigation>li:hover a::before {
+  width: 100%;
+  left: 0;
+}
 
 .main-header .main-menu .navigation>li:last-child {
   margin-right: 0;
+  margin-right: 0;
+  background: #317C6F;
+  border-radius: 100px;
+  height: 40px;
+  padding: 6px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-header .main-menu .navigation>li:last-child:hover a::before {
+  width: 0%;
+
 }
 
 .main-header .main-menu .navigation>li:last-child>a {
@@ -3730,24 +3780,30 @@ body .dribbble img {
   position: relative;
   z-index: 5;
 }
+#demo .heading-section {
+  width: 66%;
+  margin: 0px auto 48px auto;
+}
 
 .heading-section .number {
   font-size: 160px;
-  line-height: 160px;
-  margin-bottom: -8px;
+  line-height: 144px;
+  margin-bottom: -5px;
   -webkit-text-stroke: 3px #317C6F;
   color: #fff;
   display: inline-block;
 }
 
 .heading-section h2 {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: #24283E;
   font-size: 56px;
   font-weight: 500;
   line-height: 68px;
 }
-
+#features .heading-section {
+  margin-bottom: 36px;
+}
 .heading-section.white h2,
 .heading-section.white p {
   color: #fff;
@@ -3925,27 +3981,28 @@ body .dribbble img {
 .home-box .thumb .btn-group {
   position: absolute;
   left: 50%;
-  top: 75%;
+  bottom: 0%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: 2;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   gap: 8px;
 }
 
 .home-box:hover .thumb .btn-group {
   visibility: visible;
   opacity: 1;
+  bottom: 10%;
 }
 
 .home-box .thumb .sc-button {
   background-color: #fff;
   text-align: center;
-  /* visibility: hidden;
-  opacity: 0; */
+  visibility: hidden;
+  opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: #24283E !important;
@@ -3956,6 +4013,23 @@ body .dribbble img {
   border-radius: 100px;
   text-transform: capitalize;
   border: unset;
+}
+.home-box .thumb .sc-button:first-child,
+.home-box .thumb .sc-button:last-child {
+  bottom: -40px;
+  position: relative;
+}
+.home-box:hover .thumb .sc-button:first-child {
+  transition: all 0.3s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+  bottom: 0px;
+}
+.home-box:hover .thumb .sc-button:last-child {
+  transition: all 0.4s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+  bottom: 0px;
 }
 
 .home-box .thumb .sc-button:hover {
@@ -3984,7 +4058,7 @@ body .dribbble img {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: -100%;
   width: 100%;
   height: 100%;
 }
@@ -3992,6 +4066,7 @@ body .dribbble img {
 .home-box:hover .thumb a:not(.sc-button)::after {
   visibility: visible;
   opacity: 1;
+  bottom: 0%;
 }
 
 .home-box:hover .thumb .btn-groupn {
@@ -4002,6 +4077,7 @@ body .dribbble img {
 
 #demo {
   background: #F3F5F5;
+  padding: 100px 0 60px 0px;
 }
 
 .section-builer {
@@ -4013,6 +4089,10 @@ body .dribbble img {
   margin-bottom: 40px;
   border: 2px solid #fff;
   padding: 16px;
+  transition: all 0.3s ease-in-out;
+}
+.home-box:hover {
+  border: 2px solid #317C6F;
 }
 .home-box.style1{
   border: 2px solid rgba(255, 255, 255, 0.15) ;
@@ -4209,10 +4289,11 @@ body .dribbble img {
   color: #24283E;
   border-radius: 40px;
   text-transform: capitalize;
+  border: 2px solid #fff;
 }
 
 .header-button:hover {
-  background: #317C6F;
+  background: transparent;
   color: #fff;
 }
 
@@ -4222,7 +4303,7 @@ body .dribbble img {
 }
 
 .header-button.st-white:hover {
-  background: #317C6F;
+  background: transparent;
   color: #fff;
 }
 
@@ -4587,6 +4668,11 @@ body .dribbble img {
   color: #fff;
   border: 2px solid #FFFFFF;
 }
+.slider.home .building-now:hover {
+  background: #fff;
+  color: #24283E;
+  border: 2px solid #FFFFFF;
+}
 
 .slider.home .img-slider::after {
   content: '';
@@ -4651,6 +4737,8 @@ body .dribbble img {
   display: flex;
   gap: 28px;
   justify-content: flex-end;
+  padding-top: 11px;
+  margin-right: -21px;
 }
 .tf-features .qr-wrap .image img {
   width: 122px;
@@ -4752,12 +4840,12 @@ body .dribbble img {
 }
 
 .tf-innerpage .innerpage {
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   overflow: unset;
 }
 
 .tf-innerpage .swiper-pagination {
-  bottom: 20px !important;
+  bottom: -8px !important;
 }
 
 .tf-innerpage .tf-tabcontent-inner {
@@ -4780,12 +4868,12 @@ body .dribbble img {
   color: #FFFFFF;
   border-radius: 140px;
   border: 2px solid rgba(255, 255, 255, 0.15);
-  padding: 12px 24px;
-  -webkit-transition: all 0.3sease;
+  padding: 10px 24px;
+  -webkit-transition: all 0.3 sease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.3sease;
+  transition: all 0.3 sease;
   cursor: pointer;
   display: block;
 }
@@ -4795,7 +4883,7 @@ body .dribbble img {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 36px;
 }
 
 .tf-tabs .tf-tabnav ul li {
@@ -4890,7 +4978,7 @@ body .dribbble img {
 /* builder */
 
 .section-builer .heading-section h2 {
-  margin-bottom: 26px;
+  margin-bottom: 12px;
 }
 
 .section-builer .heading-section p {
@@ -4898,15 +4986,33 @@ body .dribbble img {
 }
 
 .section-builer .content-right {
-  margin-left: 20px;
+  margin-left: 28px;
+  position: relative;
 }
 
-.section-builer .content-right img {
+.section-builer .content-right .shape1 {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  z-index: 1;
+  border-radius: 4px;
+  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+  width: 155px;
+}
+.section-builer .content-right .shape2 {
+  margin-top: 30px;
+  margin-left: 22px;
+  margin-right: 0px;
+}
+.section-builer .content-right .shape3 {
+  position: absolute;
+  bottom: -21px;
+  right: 0;
 }
 
 .section-builer .inner {
   column-gap: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 36px;
 }
 
 .section-builer .heading-section {
@@ -4914,17 +5020,18 @@ body .dribbble img {
 }
 
 .section-builer .heading-section .image-builer {
-  width: 172px;
+  width: 202px;
   background: #fff;
   padding: 4px 16px;
   border-radius: 52px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .list-icon-check li {
   display: flex;
   align-items: center;
-  column-gap: 15px;
+  column-gap: 12px;
+  text-transform: capitalize;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -5008,7 +5115,7 @@ body .dribbble img {
 
 }
 .tf-features-box2 .content {
-  padding-bottom: 16px;
+  padding-bottom: 13px;
   border-bottom: 1px solid #E4E4E4;
   margin-bottom: 16px;
 }
@@ -5051,7 +5158,7 @@ body .dribbble img {
 .tf-features2 .heading-section {
   width: 70%;
   margin: 0 auto;
-  margin-bottom: 76px;
+  margin-bottom: 48px;
 }
 
 .section-builer.style2 {
@@ -5169,6 +5276,10 @@ body .dribbble img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+.tf-imagebox:hover .icon {
+  transform: rotateY(180deg);
 }
 
 .tf-assistance  {
@@ -5597,4 +5708,9 @@ body .dribbble img {
 #benefit .benefit-item .title {
   color: #24283E;
   margin-bottom: 16px;
+}
+.documentation-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
 }

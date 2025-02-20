@@ -66,7 +66,8 @@
 @media only screen and (max-width: 991px) {
   .main-header {
     backdrop-filter: unset;
-}
+  }
+
   #benefit .benefit-wrap {
     flex-wrap: wrap;
   }
@@ -252,6 +253,9 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .documentation-wrap {
+    grid-template-columns: 1fr 1fr;
+  }
 
   .row {
     margin-right: -10px;
@@ -498,7 +502,20 @@
   #benefit .benefit-item {
     padding: 30px 30px;
   }
+
   .footer .heading-section .caption-list {
     gap: 15px;
+  }
+
+  .documentation-wrap {
+    grid-template-columns: 1fr;
+  }
+  .home-box {
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+.home-box .title-box {
+  font-size: 16px;
 }
 }

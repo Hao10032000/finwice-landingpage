@@ -504,7 +504,7 @@ if (window.innerWidth > 768) {
   });
 
   var swiper = new Swiper(".innerpage", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     loop: true,
     spaceBetween: 30,
     autoplay: true,
@@ -544,60 +544,6 @@ if (window.innerWidth > 768) {
     }
   });
 
-  var swiper = new Swiper(".features2", {
-    slidesPerView: 3,
-    loop: true,
-    spaceBetween: 30,
-    autoplay: true,
-    autoplay: {
-      delay: 0,
-    },
-    speed: 20000,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1000: {
-        slidesPerView: 3,
-      }
-    }
-  });
-
-  var swiper = new Swiper(".features3", {
-    slidesPerView: 3,
-    loop: true,
-    spaceBetween: 30,
-    autoplay: true,
-    autoplay: {
-      delay: 0,
-      reverseDirection: true,
-    },
-    speed: 20000,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1000: {
-        slidesPerView: 3,
-      }
-    }
-  });
-
-
     // Dom Ready
     $(function () {
         $( window ).on('load resize',function() {
@@ -609,7 +555,7 @@ if (window.innerWidth > 768) {
         tftabs();
         custom_cursor();
         tfRevert();
-        // stickyTabs();
+        stickyTabs();
         // tf_accordion();
         removePreloader();
     });
