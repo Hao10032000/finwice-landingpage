@@ -3668,7 +3668,7 @@ path {
 #header.style-absolute.is-fixed,
 .header.is-fixed {
   position: fixed;
-  top: -80px;
+  top: 0px;
   left: 0;
   width: 100%;
   box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.05);
@@ -3676,20 +3676,20 @@ path {
   background: #24283E;
   border: none;
   opacity: 1;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header.is-fixed.is-small,
 #header.style-absolute.is-small {
   top: 0;
-  -webkit-animation-name: fadeInDown;
-  -webkit-animation-duration: 0.8s;
-  animation-name: fadeInDown;
-  animation-duration: 0.8s;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
 }
 
 /* Scroll Top
@@ -3786,12 +3786,8 @@ body .dribbble img {
 }
 
 .heading-section .number {
-  font-size: 160px;
-  line-height: 144px;
-  margin-bottom: -5px;
-  -webkit-text-stroke: 3px #317C6F;
-  color: #fff;
-  display: inline-block;
+  color: #317C6F;
+
 }
 
 .heading-section h2 {
